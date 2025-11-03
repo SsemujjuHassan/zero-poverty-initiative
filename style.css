@@ -1,0 +1,111 @@
+
+   /*Global reset & utilities*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fafafa;
+}
+img, video { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button, input, textarea { font: inherit; }
+
+  /*Layout helpers*/
+   
+.container {
+width: min(90%, 1200px);
+  margin-inline: auto;
+}
+.flex { display: flex; gap: var(--gap, 1rem); }
+.grid { display: grid; gap: var(--gap, 1rem); }
+.text-center { text-align: center; }
+.mt-1 { margin-top: .5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+ /*Header & Navigation*/
+   
+.main-header {
+ background: #004d40; color: #fff;
+  padding: 1rem 0;
+}
+.main-header .logo { font-size: 1.8rem; font-weight: 700; }
+.main-header nav ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.main-header nav a {
+  color: #fff;
+  font-weight: 600;
+  transition: color .3s;
+}
+.main-header nav a:hover { color: #ffd700; }
+
+   /*Hero / Banner*/
+   
+.banner {
+  background: #e0f2f1;
+  padding: 4rem 0;
+  text-align: center;
+}
+.banner h1 { font-size: clamp(2rem, 5vw, 3rem); color: #004d40; }
+.banner p { max-width: 700px; margin-inline: auto; }
+   /*Sections*/
+  
+section { padding: 3rem 0; }
+.section-title { color: #004d40; margin-bottom: 1rem; }
+   /*Forms*/ 
+form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: .75rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,.1);
+  max-width: 600px;
+  margin-inline: auto;
+}
+form label { display: block; margin-top: .75rem; font-weight: 600; }
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: .75rem;
+  margin-top: .25rem;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+}
+form button {
+  background: #004d40;
+  color: #fff;
+  border: none;
+  padding: .75rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: background .3s ease;
+}
+form button:hover { background: #00332b; }
+
+   /*Footer*/
+   
+footer {
+  background: #00251a;
+  color: #ddd;
+  text-align: center;
+  padding: 2rem 0;
+}
+footer a { margin: 0 .5rem; color: #ffd700; }
+footer a:hover { text-decoration: none; }
+   /*Responsive*/
+@media (max-width: 768px) {
+  .main-header nav ul { flex-direction: column; gap: .75rem; }
+  .flex { flex-direction: column; }
+}
